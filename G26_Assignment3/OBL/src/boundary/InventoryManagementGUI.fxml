@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.InventoryManagementController">
+   <children>
+      <Label layoutX="137.0" layoutY="14.0" prefHeight="26.0" prefWidth="200.0" text="Inventory managment">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="61.0" text="Number of books in the library:" />
+      <Label fx:id="numberOfBooksLabel" layoutX="195.0" layoutY="61.0" prefHeight="17.0" prefWidth="62.0" />
+      <Label layoutX="18.0" layoutY="106.0" prefHeight="17.0" prefWidth="101.0" text="manage books:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="cancelButton" layoutX="424.0" layoutY="371.0" mnemonicParsing="false" onAction="#cancelHandler" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Cancel" />
+      <Label layoutX="61.0" layoutY="147.0" prefHeight="17.0" prefWidth="117.0" text="To add Book click:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="addButton" layoutX="227.0" layoutY="144.0" mnemonicParsing="false" onAction="#addHandler" prefHeight="25.0" prefWidth="70.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Add" />
+      <Label layoutX="61.0" layoutY="204.0" text="To remove Book insert catalog number:" />
+      <TextField fx:id="insertCatalogNumberTF" layoutX="63.0" layoutY="237.0" promptText="Insert catalog number" />
+      <Button fx:id="removeButton" layoutX="227.0" layoutY="237.0" mnemonicParsing="false" onAction="#removeHandler" prefHeight="25.0" prefWidth="70.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Remove" />
+      <AnchorPane layoutX="7.0" layoutY="44.0" prefHeight="52.0" prefWidth="376.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;" />
+      <Label fx:id="resultLabel" layoutX="163.0" layoutY="370.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="279.0" text="To update Book insert catalog number:" />
+      <TextField fx:id="insertCatalogNumberTF_update" layoutX="68.0" layoutY="312.0" promptText="Insert catalog number" />
+      <Button fx:id="updateButton" layoutX="232.0" layoutY="312.0" mnemonicParsing="false" onAction="#updateHandler" prefHeight="25.0" prefWidth="70.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Update" />
+      <Button fx:id="addCopyButton" layoutX="327.0" layoutY="144.0" mnemonicParsing="false" onAction="#addCopyHandler" prefHeight="25.0" prefWidth="149.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Add copy of book" />
+   </children>
+</AnchorPane>

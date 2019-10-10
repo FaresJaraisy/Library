@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.ServerConfigurationController">
+   <children>
+      <Label alignment="CENTER" layoutX="91.0" layoutY="33.0" text="Server Configuration">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="101.0" prefHeight="17.0" prefWidth="96.0" text="MySQL host:" />
+      <Label layoutX="93.0" layoutY="180.0" prefHeight="17.0" prefWidth="103.0" text="MySQL Database:" />
+      <Label layoutX="93.0" layoutY="136.0" prefHeight="17.0" prefWidth="96.0" text="MySQL port:" />
+      <Label layoutX="93.0" layoutY="227.0" prefHeight="17.0" prefWidth="103.0" text="MySQL username:" />
+      <Label layoutX="89.0" layoutY="274.0" prefHeight="17.0" prefWidth="103.0" text="MySQL password:" />
+      <TextField fx:id="hostTF" layoutX="217.0" layoutY="97.0" text="localhost" />
+      <TextField fx:id="portTF" layoutX="217.0" layoutY="132.0" text="5555" />
+      <TextField fx:id="dbTF" layoutX="217.0" layoutY="176.0" text="OBLDB" />
+      <TextField fx:id="usernameTF" layoutX="217.0" layoutY="223.0" text="root" />
+      <Button fx:id="connectButton" layoutX="382.0" layoutY="321.0" mnemonicParsing="false" onAction="#connectToDBHandler" text="Connect" />
+      <PasswordField fx:id="passwordTF" layoutX="217.0" layoutY="270.0" text="123456" />
+      <Label fx:id="successMessage" alignment="CENTER" layoutX="177.0" layoutY="320.0" prefHeight="28.0" prefWidth="188.0">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <Button fx:id="externalButton" layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#ExternalSystemHandler" prefHeight="25.0" prefWidth="103.0" text="External system" visible="false" />
+   </children>
+</AnchorPane>

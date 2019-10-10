@@ -1,0 +1,38 @@
+
+.button:hover
+{
+	-fx-background-color:  #0090ff ;
+	 -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+	
+}
+
+.button:pressed
+{
+	-fx-background-color: #007ad8 ;
+}
+
+#searchBtn:hover
+{
+-fx-background-color: #e3e5e4 ;
+}
+#searchBtn:pressed
+{
+-fx-background-color: #bec6c2 ;
+}
+#logoutBtn:hover
+{
+-fx-background-color: #e3e5e4 ;
+}
+#logoutBtn:pressed
+{
+-fx-background-color: #bec6c2 ;
+}
+
+#messageButton:hover
+{
+-fx-background-color: #e3e5e4 ;
+}
+#messageButton:pressed
+{
+-fx-background-color: #bec6c2 ;
+}

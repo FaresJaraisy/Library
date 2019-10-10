@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OCSF"/>
+	<classpathentry kind="lib" path="src/jarFiles/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/activation.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/javax.mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/mail.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/javax.mail.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/itextpdf-5.5.13.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="src/jarFiles/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

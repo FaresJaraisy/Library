@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.EditBookController">
+   <children>
+      <VBox layoutX="259.0" layoutY="151.0" prefHeight="501.0" prefWidth="195.0" spacing="11.0">
+         <children>
+            <Label fx:id="catalogNumberLabel" alignment="CENTER" prefHeight="29.0" prefWidth="194.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titleTF" prefHeight="30.0" prefWidth="175.0" promptText="Insert title" />
+            <TextField fx:id="authorNameTF" prefHeight="30.0" prefWidth="175.0" promptText="Insert author name" />
+            <TextField fx:id="publicationTF" prefHeight="30.0" prefWidth="175.0" promptText="Insert publication" />
+            <TextField fx:id="numberOfCopiesTF" prefHeight="30.0" prefWidth="175.0" promptText="Insert number of copies" />
+            <DatePicker fx:id="purchaseDateDP" prefHeight="30.0" prefWidth="197.0" promptText="choose date" />
+            <HBox prefHeight="31.0" prefWidth="175.0">
+               <children>
+                  <TextField fx:id="shelfNumberTF" prefHeight="30.0" prefWidth="145.0" promptText="insert number of shelf" />
+                  <TextField fx:id="sideTF" prefHeight="30.0" prefWidth="73.0" promptText="side R/L" />
+               </children>
+            </HBox>
+            <TextArea fx:id="descriptionTA" prefHeight="90.0" prefWidth="175.0" promptText="Insert description" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+            <ComboBox fx:id="typeCB" prefHeight="30.0" prefWidth="208.0" promptText="choose type" />
+            <Button fx:id="uploadNewButton" mnemonicParsing="false" onAction="#UploadNewHandler" prefHeight="25.0" prefWidth="193.0" text="upload a new file" />
+            <TextField fx:id="tableOfContentsFilePathTF" prefHeight="30.0" prefWidth="195.0" promptText="Choose file path" />
+         </children>
+      </VBox>
+      <Label layoutX="84.0" layoutY="101.0" prefHeight="35.0" prefWidth="167.0" text="Edit Book" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveBookBtn" layoutX="742.0" layoutY="624.0" mnemonicParsing="false" onAction="#saveBookHandler" prefHeight="25.0" prefWidth="62.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="816.0" layoutY="624.0" mnemonicParsing="false" onAction="#cancelHandler" prefHeight="25.0" prefWidth="80.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Cancel" />
+      <Button fx:id="dirBrowseButton" layoutX="833.0" layoutY="195.0" mnemonicParsing="false" onAction="#BrowseDownloadDestinationHandler" prefHeight="25.0" prefWidth="62.0" text="Browse" />
+      <Label layoutX="84.0" layoutY="151.0" prefHeight="30.0" prefWidth="175.0" text="Catalog number:" />
+      <Label layoutX="84.0" layoutY="192.0" prefHeight="30.0" prefWidth="175.0" text="Title:" />
+      <Label layoutX="84.0" layoutY="234.0" prefHeight="30.0" prefWidth="175.0" text="Author name:" />
+      <Label layoutX="84.0" layoutY="274.0" prefHeight="30.0" prefWidth="175.0" text="Publication:" />
+      <Label layoutX="84.0" layoutY="314.0" prefHeight="30.0" prefWidth="175.0" text="Number of copies:" />
+      <Label layoutX="84.0" layoutY="357.0" prefHeight="30.0" prefWidth="175.0" text="Purchase date:" />
+      <Label layoutX="84.0" layoutY="398.0" prefHeight="30.0" prefWidth="175.0" text="Location on shelf:" />
+      <Label layoutX="84.0" layoutY="442.0" prefHeight="30.0" prefWidth="175.0" text="Descriprion:" />
+      <Label layoutX="84.0" layoutY="540.0" prefHeight="30.0" prefWidth="175.0" text="Type:" />
+      <Label layoutX="81.0" layoutY="582.0" prefHeight="30.0" prefWidth="175.0" text="Table of content:" />
+      <AnchorPane layoutX="4.0" prefHeight="50.0" prefWidth="900.0">
+         <children>
+            <ImageView fx:id="oblImg" fitHeight="88.0" fitWidth="124.0" layoutX="326.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="450.0" layoutY="2.0" prefHeight="74.0" prefWidth="167.0" text="OBL">
+               <font>
+                  <Font name="System Bold Italic" size="60.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.4962962680392795" centerY="0.4777777898879278" focusAngle="-75.32" focusDistance="0.04651162790697683" radius="0.5387597194937772">
+                     <stops>
+                        <Stop color="#ff001e" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="downloadFileButton" layoutX="682.0" layoutY="236.0" mnemonicParsing="false" onAction="#downloadHandler" text="Download table of contents file" />
+      <Button fx:id="viewFileButton" layoutX="743.0" layoutY="278.0" mnemonicParsing="false" onAction="#viewFileHandler" text="view file" />
+      <TextField fx:id="destTF" layoutX="653.0" layoutY="195.0" prefHeight="25.0" prefWidth="175.0" promptText="Choose downlaod Destination" />
+      <Label layoutX="493.0" layoutY="199.0" text="Download Table of contents" />
+      <Button fx:id="FileBrowserButton" layoutX="466.0" layoutY="624.0" mnemonicParsing="false" onAction="#BrowseFileHandler" text="browse" />
+      <Label layoutX="534.0" layoutY="275.0" prefHeight="30.0" prefWidth="73.0" text="Categories:" />
+      <ComboBox fx:id="categoriesComboBox" layoutX="604.0" layoutY="278.0" prefHeight="25.0" prefWidth="221.0" />
+      <Button fx:id="addCategoryBtn" layoutX="847.0" layoutY="278.0" mnemonicParsing="false" onAction="#addCategoryHandler" text="Add" />
+      <TextField fx:id="newCategoryTF" layoutX="686.0" layoutY="361.0" prefHeight="25.0" prefWidth="150.0" promptText="Insert Category name" />
+      <Button fx:id="addNewCategoryBtn" layoutX="835.0" layoutY="360.0" mnemonicParsing="false" onAction="#addNewCategoryHandler" text="Add" />
+      <Button fx:id="show_hide_newCategoryPromptBtn" layoutX="669.0" layoutY="318.0" mnemonicParsing="false" onAction="#show_hide_newCategoryPromptHandler" prefHeight="25.0" prefWidth="221.0" text="Add New Category" />
+      <TextArea fx:id="categoriesTA" editable="false" layoutX="659.0" layoutY="411.0" prefHeight="88.0" prefWidth="235.0" wrapText="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.ConnectToServerController">
+   <children>
+      <Label alignment="CENTER" layoutX="99.0" layoutY="22.0" text="Connect to server">
+         <font>
+            <Font name="Algerian" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ipTF" layoutX="204.0" layoutY="91.0" promptText="Enter IP Address" text="localhost" />
+      <Label layoutX="19.0" layoutY="93.0" text="Enter the server IP address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="connectButton" layoutX="383.0" layoutY="91.0" mnemonicParsing="false" onAction="#connectHandler" text="Launch" />
+      <Label fx:id="errorLabel" layoutX="87.0" layoutY="132.0" text="Error: Please provide IP Address" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

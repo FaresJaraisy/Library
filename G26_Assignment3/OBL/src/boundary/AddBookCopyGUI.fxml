@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.AddBookCopyController">
+   <children>
+      <VBox layoutX="259.0" layoutY="151.0" prefHeight="178.0" prefWidth="195.0" spacing="11.0">
+         <children>
+            <TextField fx:id="catalogNumberTF" prefHeight="30.0" prefWidth="175.0" promptText="Insert catalog number" />
+            <TextField fx:id="barcodeTF" prefHeight="30.0" prefWidth="175.0" promptText="Insert barcode" />
+            <DatePicker fx:id="purchaseDateDP" prefHeight="30.0" prefWidth="197.0" promptText="choose date" />
+            <HBox prefHeight="31.0" prefWidth="175.0">
+               <children>
+                  <ComboBox fx:id="statusCB" prefHeight="30.0" prefWidth="208.0" promptText="choose type" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="84.0" layoutY="101.0" prefHeight="35.0" prefWidth="167.0" text="Add New Copy" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="addCopyBtn" layoutX="460.0" layoutY="332.0" mnemonicParsing="false" onAction="#addCopyHandler" prefHeight="25.0" prefWidth="141.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Add Book" />
+      <Button fx:id="cancelBtn" layoutX="616.0" layoutY="332.0" mnemonicParsing="false" onAction="#cancelHandler" prefHeight="25.0" prefWidth="80.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="Cancel" />
+      <Label layoutX="84.0" layoutY="151.0" prefHeight="30.0" prefWidth="175.0" text="Catalog number:" />
+      <Label layoutX="84.0" layoutY="192.0" prefHeight="30.0" prefWidth="175.0" text="Barcode" />
+      <Label layoutX="84.0" layoutY="233.0" prefHeight="30.0" prefWidth="175.0" text="Purchase date:" />
+      <Label layoutX="84.0" layoutY="274.0" prefHeight="30.0" prefWidth="175.0" text="Status" />
+      <AnchorPane layoutX="-5.0" prefHeight="91.0" prefWidth="726.0">
+         <children>
+            <ImageView fx:id="oblImg" fitHeight="88.0" fitWidth="124.0" layoutX="326.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="264.0" layoutY="3.0" prefHeight="88.0" prefWidth="124.0" text="OBL">
+               <font>
+                  <Font name="System Bold Italic" size="60.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.4962962680392795" centerY="0.4777777898879278" focusAngle="-75.32" focusDistance="0.04651162790697683" radius="0.5387597194937772">
+                     <stops>
+                        <Stop color="#ff001e" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="90.0" layoutY="330.0" prefHeight="30.0" prefWidth="361.0" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
