@@ -5,3 +5,17 @@ managing a library system using client-server technology over a TCP/IP
 connection. The duration of the project was a whole semester and was
 implemented using Java and SQL on Eclipse and MySQL in a team of 4 people
 (final grade 94).
+
+# Images
+
+
+![](images/log-in.PNG)
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+![](images/librarian%20page.PNG)
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+![](images/server.PNG)
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+![](images/user%20page.PNG)
